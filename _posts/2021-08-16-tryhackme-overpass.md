@@ -4,7 +4,7 @@ title:  "TryHackMe - Overpass Writeup"
 date:   2021-08-16 15:06:00 -0400
 categories: tryhackme pentesting cybersecurity
 ---
-By now, everyone has done a writeup of the Overpass room on TryHackMe, but I've decided I want to try my hand at it anyway. Hopefully someone will find it helpful.
+By now, everyone has done a writeup of the [Overpass](https://tryhackme.com/room/overpass) room on TryHackMe, but I've decided I want to try my hand at it anyway. Hopefully someone will find it helpful.
 
 ## Nmap Enumeration
 The first step in any pentest situation is enumeration. It's important to get as much information about the machine and its users as possible. To start off, we'll use Nmap to perform a port scan and see what services are active and listening on the box. Nmap is a versitle tool, and many people have their own preferred methods to balance speed and accuracy, but here are the options I'll use.
