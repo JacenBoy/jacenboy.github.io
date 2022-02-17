@@ -17,7 +17,7 @@ Properly explaining the difference between virtualization and emulation is also 
 
 To start things off, we'll need an app called [Termux](https://github.com/termux/termux-app). There are plans to remove it from the Google Play Store, so you'll need to get it from either F-Droid or GitHub. Instructions for installing are available from the GitHub repository.
 
-Termux uses a utility called `pkg` (not te be confused with the BSD rendition of `pkg`), which we'll use to install a few packages. First, to make the initial setup a little bit more convenient, we'll install `openssh`. This lets us SSH into the phone so we have a proper keyboard for typing commands and writing scripts. Once that's installed, use the `passwd` command to set a password, and use `sshd` to start the server.
+Termux uses a utility called `pkg` (not to be confused with the BSD rendition of `pkg`), which we'll use to install a few packages. First, to make the initial setup a little bit more convenient, we'll install `openssh`. This lets us SSH into the phone so we have a proper keyboard for typing commands and writing scripts. Once that's installed, use the `passwd` command to set a password, and use `sshd` to start the server.
 
 ```bash
 pkg install openssh
