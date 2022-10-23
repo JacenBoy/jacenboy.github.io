@@ -3,6 +3,7 @@ layout: post
 title:  "TryHackMe - Chill Hack"
 date:   2022-05-03 08:47:00 -0400
 categories: tryhackme pentesting cybersecurity
+comments: true
 ---
 
 [Chill Hack](https://tryhackme.com/room/chillhack) is an easy-ranked box. Unfortunately, it wasn't the most fun box to do, with a handful of unrealistic and unintuitive stops along the killchain.

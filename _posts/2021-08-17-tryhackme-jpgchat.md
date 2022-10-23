@@ -3,6 +3,7 @@ layout: post
 title:  "TryHackMe - JPGChat Writeup"
 date:   2021-08-17 08:47:00 -0400
 categories: tryhackme pentesting cybersecurity
+comments: true
 ---
 
 [JPGChat](https://tryhackme.com/room/jpgchat) was a very quick and easy box, but it does have a simple OSINT step that was a bit of fun to follow.

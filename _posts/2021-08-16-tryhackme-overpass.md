@@ -3,6 +3,7 @@ layout: post
 title:  "TryHackMe - Overpass Writeup"
 date:   2021-08-16 15:06:00 -0400
 categories: tryhackme pentesting cybersecurity
+comments: true
 ---
 By now, everyone has done a writeup of the [Overpass](https://tryhackme.com/room/overpass) room on TryHackMe, but I've decided I want to try my hand at it anyway. Hopefully someone will find it helpful.
 

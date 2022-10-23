@@ -3,6 +3,7 @@ layout: post
 title:  "TryHackMe - HackPark Writeup"
 date:   2021-11-02 12:52:00 -0400
 categories: tryhackme pentesting cybersecurity
+comments: true
 ---
 
 [HackPark](https://tryhackme.com/room/hackpark) is a Medium difficulty room, although it guides you along fairly well for the initial foothold, and it's pretty easy to root if you do proper basic enumeration.

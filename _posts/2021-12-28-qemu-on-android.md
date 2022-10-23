@@ -3,6 +3,7 @@ layout: post
 title:  "Running QEMU on an Android Host"
 date:   2021-12-28 16:50:00 -0400
 categories: qemu emulation arch android phone
+comments: true
 ---
 
 For a few years, modern flagship phones have had comparable specs to mid-tier computers, which gave me a thought: why can't you just run a full-fledged virtual machine on your phone?

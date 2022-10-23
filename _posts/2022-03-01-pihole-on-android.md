@@ -3,6 +3,7 @@ layout: post
 title:  "Hosting Pi-hole on Android Using QEMU"
 date:   2022-03-01 06:09:00 -0400
 categories: qemu emulation ubuntu android phone pi-hole
+comments: true
 ---
 
 Advertisements suck. Beyond being generally obnoxious, they can cause performance issues and even sometimes be downright malicious. There are plenty of ad-block solutions for your browser, but not as many to help with ads not hosted on websites, especially in apps on your phone. One of the most notable solutions to that problem is [Pi-hole](https://pi-hole.net), a DNS-level ad-blocker that can run on something as simple as a Raspberry Pi. That's great for when you're at home, but the official solution for using Pi-hole on the go is a bit obnoxious.
