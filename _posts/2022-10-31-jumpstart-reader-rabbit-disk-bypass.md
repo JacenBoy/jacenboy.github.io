@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "JumpStart/Reader Rabbit Disk Bypass"
-date:   2022-10-31 08:47:00 -0400
+date:   2022-10-31 16:54:00 -0400
 categories: windows educational reader rabbit jumpstart
 comments: true
 ---
@@ -26,6 +26,7 @@ Reader Rabbit's Preschool is perfectly happy running entirely off of the ISO; th
 ![Properties for the Reader Rabbit's Preschool Start Menu shortcut](/assets/images/disk-bypass/rrp-properties.png)
 
 Reader Rabbit's 1st Grade is a bit of a different animal. Even with the ISO mounted, it doesn't seem to want to launch the game.
+
 ![CD error for Reader Rabbit's 1st Grade](/assets/images/disk-bypass/rrf-error.png)
 
 Procmon shows that it seems to expect the install files to exist on the root of the drive. Unlike JumpStart, which tracks the full installer path, Reader Rabbit seems to only keep track of which drive the install was initiated from.
