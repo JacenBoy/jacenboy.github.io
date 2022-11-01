@@ -8,7 +8,7 @@ comments: true
 
 [Chill Hack](https://tryhackme.com/room/chillhack) is an easy-ranked box. Unfortunately, it wasn't the most fun box to do, with a handful of unrealistic and unintuitive stops along the killchain.
 
-## Nmap Emumeration
+## Nmap Enumeration
 As ever, the first thing to do is run an nmap scan to see what services are accessible to us on the box. People always have their own methodology for what command line options to use, but here are the ones I went with.
 
 - `-sC`: Run default scripts. Nmap can do additional enumeration beyond just checking for open ports, and this option will run some quick and useful extra scans to give us even more information about what we’re working with.
@@ -108,7 +108,7 @@ User www-data may run the following commands on ubuntu:
     (apaar : ALL) NOPASSWD: /home/apaar/.helpline.sh
 ```
 
-If we input `bash` at the `msg` prompt, we land in a bash shell as the `apaar` user. From here we can grab the user flag in the `local.txt` file. We can drop an SSH key in here as well to give us a better, more firendly shell.
+If we input `bash` at the `msg` prompt, we land in a bash shell as the `apaar` user. From here we can grab the user flag in the `local.txt` file. We can drop an SSH key in here as well to give us a better, more friendly shell.
 
 ## Privesc 2: Electric Boogaloo
 Unfortunately, `apaar` doesn't give us a lot of additional permissions, so we'll need to keep poking. Checking `netstat`, there's another service available only to localhost on port 9001 that we can check next.

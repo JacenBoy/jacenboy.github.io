@@ -16,13 +16,13 @@ I have [previously run a Linux virtual machine on an Android phone](/2021/12/28/
 
 If you haven't installed it already, the first step is to get Termux. It seems like they really want you to just install it from GitHub, but it is available on F-Droid as well. Instructions for installing it are available in their GitHub repository.
 
-Termux uses `apt` for package management, but provides and recommends using [pkg](https://wiki.termux.com/wiki/Package_Management) for package management. We'll need to use pkg to install QEMU, but I'd reccommend setting up [OpenSSH](https://wiki.termux.com/wiki/Remote_Access#Using_the_SSH_server) as well so you can type commands on a full-sized keyboard instead of relying on your phone keyboard. We'll be emulating an x86 CPU, so we'll grab that version of QEMU along with a collection of extra tools we'll need.
+Termux uses `apt` for package management, but provides and recommends using [pkg](https://wiki.termux.com/wiki/Package_Management) for package management. We'll need to use pkg to install QEMU, but I'd recommend setting up [OpenSSH](https://wiki.termux.com/wiki/Remote_Access#Using_the_SSH_server) as well so you can type commands on a full-sized keyboard instead of relying on your phone keyboard. We'll be emulating an x86 CPU, so we'll grab that version of QEMU along with a collection of extra tools we'll need.
 
 ```bash
 pkg install qemu-system-x86-64-headless qemu-utils
 ```
 
-To help keep things tidy, I've created a dedicated diretcory for storing QEMU's files, so we'll created the disk image file for our VM to boot from in there. We’ll use the `qcow2` format, which has the advantage of taking up space as needed rather than allocating all of it at once at the cost of speed. If you really want that bit of extra performance, you can use the `raw` format instead. You can also adjust the maximum size of the disk as needed.
+To help keep things tidy, I've created a dedicated directory for storing QEMU's files, so we'll created the disk image file for our VM to boot from in there. We’ll use the `qcow2` format, which has the advantage of taking up space as needed rather than allocating all of it at once at the cost of speed. If you really want that bit of extra performance, you can use the `raw` format instead. You can also adjust the maximum size of the disk as needed.
 
 ```bash
 cd qemu
@@ -57,7 +57,7 @@ Here's a basic rundown of the options and what they actually do:
 
 - `-name`: Set up a nice friendly name for the VM. Not strictly necessary, but definitely aesthetic.
 - `-smp`: Set the number of CPU cores the VM will use. Depends on you and your phone's hardware.
-- `-m`: Set the ammount of memory for the VM. Like the CPU cores, this depends on your preferences and hardware.
+- `-m`: Set the amount of memory for the VM. Like the CPU cores, this depends on your preferences and hardware.
 - `-drive`: Mounts our disk image in the VM.
 - `-nic`: Sets up our network interface. `user` is basically the equivalent of NAT mode in other hypervisors like VirtualBox. More importantly, it lets us define the `hostfwd` options to forward the ports Pi-hole uses from the VM to the phone. In particular, we need port 80 for the web admin interface and port 53 for actually serving DNS requests. Note that unless your phone is rooted, ports 80 and 53 will be [inaccessible on the host side of things](https://www.staldal.nu/tech/2007/10/31/why-can-only-root-listen-to-ports-below-1024/), so you'll need to pick port numbers above 1023.
 - `-vga`: Selects what kind of video output we want to emulate. This isn't strictly necessary, since if you don't define it QEMU uses `std` by default anyway.

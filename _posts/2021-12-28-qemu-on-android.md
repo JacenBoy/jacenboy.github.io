@@ -56,7 +56,7 @@ To break down the command:
 - `-smp`: Set the number of CPU cores the VM will use. Depends on you and your phone's hardware.
 - `-drive`: Mounts our disk image in the VM.
 - `-cdrom`: Mounts our ISO as a CD-ROM. A bit of a convenience function for some of the possible options of `-drive`.
-- `-m`: Set the ammount of memory for the VM. Like the CPU cores, this depends on your preferences and hardware.
+- `-m`: Set the amount of memory for the VM. Like the CPU cores, this depends on your preferences and hardware.
 - `-device`: Configures emulated hardware devices. One of them is a USB controller, and the other is our emulated mouse that it plugged into said controller. There can be weird mouse issues without that specific input device.
 - `-vga`: Selects what kind of video output we want to emulate. `virtio` in particular has some 3D support, although it's apparently still kind of beta-y.
 - `-boot`: Sets the boot order. `menu=on` gives us the option to see the boot menu and manually override the boot order if we need to.
@@ -84,7 +84,7 @@ If you haven't already, grab an Android VNC viewer of your choice to make the VM
 
 ![Arch on Android](/assets/images/arch-sc.jpg)
 
-And the end result... doesn't work particularly well. It's surprisingly usable, but there are definitely noticable performance issues. Like I mentioned earlier, emulation has more performance overhead than virtualization does, and despite the specs looking good on paper, in practice a phone doesn't have the same performance horsepower that your computer would. Still, for whatever it's worth, you can now brag to your friends that you have a full-fledged desktop computer in your phone.
+And the end result... doesn't work particularly well. It's surprisingly usable, but there are definitely noticeable performance issues. Like I mentioned earlier, emulation has more performance overhead than virtualization does, and despite the specs looking good on paper, in practice a phone doesn't have the same performance horsepower that your computer would. Still, for whatever it's worth, you can now brag to your friends that you have a full-fledged desktop computer in your phone.
 
 One interesting side-note: I initially wanted to run Chrome as the browser for this VM since it apparently it has more efficient CPU usage compared to Firefox, and, despite what the Internet would like you to believe, the memory usage between them is pretty comparable. However, there seems to be a bug where running Chrome in the VM crashes QEMU. I'm not sure if it's a Chrome issue or a QEMU issue, but it's an interesting interaction.
 
