@@ -2,7 +2,7 @@
 layout: post
 title:  "Hosting Pi-hole on Android Using QEMU"
 date:   2022-03-01 06:09:00 -0400
-categories: qemu emulation ubuntu android phone pi-hole
+tags: qemu emulation ubuntu android phone pi-hole
 comments: true
 ---
 

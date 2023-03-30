@@ -2,7 +2,7 @@
 layout: post
 title:  "TryHackMe - JPGChat Writeup"
 date:   2021-08-17 08:47:00 -0400
-categories: tryhackme pentesting cybersecurity
+tags: tryhackme pentesting cybersecurity
 comments: true
 ---
 

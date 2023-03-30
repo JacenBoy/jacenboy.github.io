@@ -2,7 +2,7 @@
 layout: post
 title:  "Running QEMU on an Android Host"
 date:   2021-12-28 16:50:00 -0400
-categories: qemu emulation arch android phone
+tags: qemu emulation arch android phone
 comments: true
 ---
 

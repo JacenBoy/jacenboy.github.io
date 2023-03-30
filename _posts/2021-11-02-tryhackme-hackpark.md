@@ -2,7 +2,7 @@
 layout: post
 title:  "TryHackMe - HackPark Writeup"
 date:   2021-11-02 12:52:00 -0400
-categories: tryhackme pentesting cybersecurity
+tags: tryhackme pentesting cybersecurity
 comments: true
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title:  "JumpStart/Reader Rabbit Disk Bypass"
 date:   2022-10-31 16:54:00 -0400
-categories: windows educational reader rabbit jumpstart
+tags: windows educational reader-rabbit jumpstart
 comments: true
 ---
 

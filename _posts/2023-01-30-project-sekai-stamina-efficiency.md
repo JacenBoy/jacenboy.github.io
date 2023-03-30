@@ -2,7 +2,7 @@
 layout: post
 title:  "Project Sekai Stamina Efficiency"
 date:   2023-01-31 00:31:00 -0400
-categories: project_sekai vocaloid gacha math
+tags: project-sekai vocaloid gacha math
 comments: true
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title:  "TryHackMe - Chill Hack"
 date:   2022-05-03 08:47:00 -0400
-categories: tryhackme pentesting cybersecurity
+tags: tryhackme pentesting cybersecurity
 comments: true
 ---
 
